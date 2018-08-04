@@ -7,8 +7,8 @@ const app = express();
 // set a local port number (development)
 const localport = 3000;
 
-// use the providers (heroku) port variable if there is one (production)
-// otherwise use our local port
+// use the providers (heroku) port variable if there is one (published production)
+// otherwise use our local port (development)
 const port = process.env.port || localport;
 
 // create a base route to direct requests to
