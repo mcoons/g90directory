@@ -9,7 +9,7 @@ const localport = 3000;
 
 // use the providers (heroku) port variable if there is one (published production)
 // otherwise use our local port (development)
-const port = process.env.port || localport;
+const port = process.env.PORT || localport;
 
 // create a base route to direct requests to
 app.get('/', (request, response, next) => response.send('Hello There'));       
