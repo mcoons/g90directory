@@ -1,0 +1,22 @@
+<% include ./partials/header.ejs %>
+<h1>Find Student</h1>
+<form action="" method="get">
+    <input type="radio" name="radio_find" id="radio_byID">
+    <label for="radio_byID">Find by ID</label><br>
+
+    <input type="radio" name="radio_find" id="radio_byLastName">
+    <label for="radio_byLastName">Find by Last Name</label><br>
+
+    <input type="radio" name="radio_find" id="radio_byFirstName">
+    <label for="radio_byFirstName">Find by First Name</label><br>
+
+    <label for="findValue">Search Value: </label>    
+    <input type="text" name="findValue" id="findValue"><br>
+
+
+    <input type="submit" value="Submit">
+</form>
+
+
+
+<% include ./partials/footer.ejs %>

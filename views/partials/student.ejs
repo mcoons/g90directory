@@ -1,0 +1,10 @@
+<div class='card'>
+    <img class='ui fluid image' src="<%= student.photo %>" alt="Favorite Animal Picture">
+    <h3><%= student.first_name %> <%= student.last_name %></h3>
+    <p><b>Previous Occupation:</b> <%= student.prev_occupation %></p>
+    <p><b>Hometown Location:</b> <%= student.hometown_lat %> - <%= student.hometown_long %></p>
+    <!-- <a href="/students/<%=student.id%>/edit">Edit This Student</a> -->
+    <a class="button" href="/students/<%= student.id %>">View Student </a>
+    <a href="/students/<%= student.id %>">Edit Student </a>
+    <a href="/students/<%= student.id %>">Delete Student </a>
+</div>
