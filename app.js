@@ -5,8 +5,6 @@ const queries = require("./queries");
 // const methodOverride = require("method-override");
 
 
-
-
 // instantiate an instance of the express class as 'app'
 const app = express();
 
@@ -52,7 +50,6 @@ app.post("/students/found", (request, response, next) => {
   .read(request.body.radio_find,request.body.findValue)
   .then(student => {
     response.render( "view", {student: student});
-    console.log(request.body)
   })
   .catch(next);  
 })
@@ -76,17 +73,19 @@ app.post("/students", (request, response) => {
           response.send("error: ", err);
       });
 });
+
 // app.put();
 
 app.get("/students/:id/delete", (request, response, next) => {
-    queries
-      .delete(request.params.id)
-      .then( () => { response.redirect("/students");})
-      .catch(next);
-
+  queries
+    .delete(request.params.id)
+    .then( () => { response.redirect("/students");})
+    .catch(next);
 });
 
-
+app.get("/about", (request, response, next) => {
+  response.render("about");
+}) 
 
 
 // API Routes - read only
@@ -126,6 +125,7 @@ app.get("/api/fname/:fname", (request, response, next) => {
     })
     .catch(next);
 });
+
 
 
 // tell the express app to listen for requests on our port

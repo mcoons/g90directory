@@ -4,6 +4,15 @@
     <p><b>Previous Occupation:</b> <%= student.prev_occupation %></p>
     <p><b>Hometown Location:</b> <%= student.hometown_lat %> - <%= student.hometown_long %></p>
     <!-- <a href="/students/<%=student.id%>/edit">Edit This Student</a> -->
+   
+    <iframe
+    width="200"
+    height="200"
+    frameborder="0" style="border:0"
+    src="https://www.google.com/maps/embed/v1/view?key=AIzaSyCHy2l3K0UCngroR59ogIe6dYUgcpo_uuc&center=<%= student.hometown_lat %>,<%= student.hometown_long %>&zoom=10&maptype=satellite"
+    >
+    </iframe>
+
     <a href="/students/<%= student.id %>">View Student </a>
     <a href="/students/<%= student.id %>">Edit Student </a>
     <a href="/students/<%= student.id %>/delete">Delete Student </a>
