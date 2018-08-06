@@ -1,19 +1,20 @@
-<% include ./partials/header.ejs %>
-
-<form action="" method="post">
+<% include ./partials/header %>
+<br><br><br><br>
+<h1>Add Student</h1>
+<form class="ui form" action="/students" method="POST">
     <label for="first_name">First Name:</label>
-    <input type="text" name="first_name" id="first_name"><br>
+    <input type="text" name="student[first_name]" id="first_name"><br/>
     <label for="last_name">Last Name:</label>
-    <input type="text" name="last_name" id="last_name"><br>
+    <input type="text" name="student[last_name]" id="last_name">
     <label for="photo">Photo URL: </label>
-    <input type="text" name="photo" id="photo"><br>
+    <input type="text" name="student[photo]" id="photo">
     <label for="hometown_lat">Hometown Latitude: </label>
-    <input type="text" name="hometown_lat" id="hometown_lat"><br>
+    <input type="text" name="student[hometown_lat]" id="hometown_lat">
     <label for="hometown_long">Hometown Longitude: </label>
-    <input type="text" name="hometown_long" id="hometown_long"><br>
+    <input type="text" name="student[hometown_long]" id="hometown_long">
     <label for="prev_occupation">Previous Occupation: </label>
-    <input type="text" name="prev_occupation" id="prev_occupation"><br>
-    <input type="submit" value="submit">
+    <input type="text" name="student[prev_occupation]" id="prev_occupation">
+    <input type="submit">
 </form>
 
-<% include ./partials/footer.ejs %>
+<% include ./partials/footer %>

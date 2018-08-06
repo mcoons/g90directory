@@ -1,13 +1,17 @@
 // require/import the express module(s)
 const express = require("express");
-
+// const cors = require("cors");
 const queries = require("./queries");
+// const methodOverride = require("method-override");
 
 // instantiate an instance of the express class as 'app'
 const app = express();
 
+app.use(express.urlencoded({ extended: true }));
+// app.use(cors);
+app.use(express.static('public'));
+// app.use(methodOverride("_method"));
 app.set("view engine", "ejs");
-app.use(express.static('public'))
 
 
 // set a local port number (development)
@@ -32,15 +36,6 @@ app.get("/students", (request, response, next) => {
     .catch(next);
 });
 
-app.get("/students/id/:id", (request, response, next) => {
-  queries
-    .read('id',request.params.id)
-    .then(student => {
-      response.render( "view", {student: student});
-    })
-    .catch(next);
-});
-
 app.get("/students/new", (request, response, next) => {
   response.render("postform");
 });
@@ -49,8 +44,46 @@ app.get("/students/find", (requests, response, next) => {
   response.render("findform");
 })
 
+app.post("/students/found", (request, response, next) => {
+  // response.json (console.log(request.body));
+  queries
+  .read("id",request.body.findValue)
+  .then(student => {
+    response.render( "view", {student: student});
+  })
+  .catch(next);  
+})
 
-// API Routes
+app.get("/students/:id", (request, response, next) => {
+  queries
+    .read("id",request.params.id)
+    .then(student => {
+      response.render( "view", {student: student});
+    })
+    .catch(next);
+});
+
+app.post("/students", (request, response) => {
+  queries
+      .create(request.body.student)
+      .then( () => {
+          response.redirect("/");
+      })
+      .catch(err => {
+          response.send("error: ", err);
+      });
+});
+// app.put();
+
+app.get("/students/:id/delete", (request, response, next) => {
+    queries
+      .delete(request.params.id)
+      .then( () => { response.redirect("/students");})
+      .catch(next);
+});
+
+
+// API Routes - read only
 
 app.get("/api/", (request, response, next) => {
   queries
