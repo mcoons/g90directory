@@ -1,13 +1,25 @@
 <% include ./partials/header %>
 <br><br><Br>
-<% student.forEach(student => { %>
 
-<div class = 'ui cards'>
-    
-    <% include ./partials/student %>
-    
-</div>
 
-<% })   %>
+
+    <div class="ui container">
+            <div class="ui four column doubling stackable masonry grid">
+            <% student.forEach(student => { %>
+                <div class="column">
+                    <div class = 'ui cards'>
+                        <% include ./partials/student %>
+                    </div>
+                </div>
+            <% }) %>
+            </div>
+        </div>
+
+
+
+
+
+
+
 
 <% include ./partials/footer %>

@@ -4,6 +4,9 @@ const express = require("express");
 const queries = require("./queries");
 // const methodOverride = require("method-override");
 
+
+
+
 // instantiate an instance of the express class as 'app'
 const app = express();
 
@@ -80,7 +83,10 @@ app.get("/students/:id/delete", (request, response, next) => {
       .delete(request.params.id)
       .then( () => { response.redirect("/students");})
       .catch(next);
+
 });
+
+
 
 
 // API Routes - read only

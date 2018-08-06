@@ -15,7 +15,6 @@ footer {
     padding: 10px;
 }
 
-label
 
 form {
     width: 300px;
@@ -24,6 +23,16 @@ column {
     width: 300px;
 }
 
-.mycard {
-    padding: 10px override;
+.mycard{
+    padding: 10px !important;
+    box-shadow: 5px 5px 5px #888888 !important;
+}
+
+.mycard img{
+    padding: 10px !important;
+    box-shadow: 5px 5px 5px #888888 !important;
+}
+
+.header img {
+    width: 50px;
 }

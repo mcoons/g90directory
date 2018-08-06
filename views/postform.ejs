@@ -1,5 +1,5 @@
 <% include ./partials/header %>
-<br><br><br>
+<!-- <br><br><br> -->
 <h1>Add Student</h1>
 <form class="ui form" action="/students" method="POST">
 
@@ -12,16 +12,16 @@
     <label class="input" for="photo">Photo URL: </label>
     <input class="input" type="text" name="student[photo]" id="photo" required>
     
-    <label for="hometown_lat">Hometown Latitude: </label>
-    <input type="text" name="student[hometown_lat]" id="hometown_lat" required>
+    <label class="input" for="hometown_lat">Hometown Latitude: </label>
+    <input class="input" type="text" name="student[hometown_lat]" id="hometown_lat" required>
     
-    <label for="hometown_long">Hometown Longitude: </label>
-    <input type="text" name="student[hometown_long]" id="hometown_long" required>
+    <label class="input" for="hometown_long">Hometown Longitude: </label>
+    <input class="input" type="text" name="student[hometown_long]" id="hometown_long" required>
    
-    <label for="prev_occupation">Previous Occupation: </label>
-    <input type="text" name="student[prev_occupation]" id="prev_occupation" required>
+    <label class="input" for="prev_occupation">Previous Occupation: </label>
+    <input class="input" type="text" name="student[prev_occupation]" id="prev_occupation" required>
    
-    <input type="submit">
+    <input class="input" type="submit">
 </form>
 
 <% include ./partials/footer %>
