@@ -45,11 +45,11 @@ app.get("/students/find", (requests, response, next) => {
 })
 
 app.post("/students/found", (request, response, next) => {
-  // response.json (console.log(request.body));
   queries
-  .read("id",request.body.findValue)
+  .read(request.body.radio_find,request.body.findValue)
   .then(student => {
     response.render( "view", {student: student});
+    console.log(request.body)
   })
   .catch(next);  
 })

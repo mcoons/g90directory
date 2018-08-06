@@ -1,7 +1,7 @@
 const database = require("./database-connection");
 
 module.exports = {
-  
+
   list() {
     return database("student")
       .select();
@@ -18,8 +18,8 @@ module.exports = {
   read(attribute, value) {
     return database("student")
       .select()
-      .where(attribute, value)
-      .first();
+      .where(attribute, value);
+      // .first();
   },
 
   update(id, student) {

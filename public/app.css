@@ -1,8 +1,29 @@
 body {
     padding: 20px;
-    background-color: green;
+    background-color: lightgray;
 }
 
-.card {
+footer {
+    color: white;
+    background-color: black;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+.input {
+    margin: 10px;
     padding: 10px;
+}
+
+label
+
+form {
+    width: 300px;
+}
+column {
+    width: 300px;
+}
+
+.mycard {
+    padding: 10px override;
 }

@@ -1,19 +1,26 @@
 <% include ./partials/header %>
-<br><br><br><br>
+<br><br><br>
 <h1>Add Student</h1>
 <form class="ui form" action="/students" method="POST">
-    <label for="first_name">First Name:</label>
-    <input type="text" name="student[first_name]" id="first_name"><br/>
-    <label for="last_name">Last Name:</label>
-    <input type="text" name="student[last_name]" id="last_name">
-    <label for="photo">Photo URL: </label>
-    <input type="text" name="student[photo]" id="photo">
+
+    <label class="input" for="first_name">First Name:</label>
+    <input class="input" type="text" name="student[first_name]" id="first_name" required><br/>
+    
+    <label class="input" for="last_name">Last Name:</label>
+    <input class="input" type="text" name="student[last_name]" id="last_name" required>
+    
+    <label class="input" for="photo">Photo URL: </label>
+    <input class="input" type="text" name="student[photo]" id="photo" required>
+    
     <label for="hometown_lat">Hometown Latitude: </label>
-    <input type="text" name="student[hometown_lat]" id="hometown_lat">
+    <input type="text" name="student[hometown_lat]" id="hometown_lat" required>
+    
     <label for="hometown_long">Hometown Longitude: </label>
-    <input type="text" name="student[hometown_long]" id="hometown_long">
+    <input type="text" name="student[hometown_long]" id="hometown_long" required>
+   
     <label for="prev_occupation">Previous Occupation: </label>
-    <input type="text" name="student[prev_occupation]" id="prev_occupation">
+    <input type="text" name="student[prev_occupation]" id="prev_occupation" required>
+   
     <input type="submit">
 </form>
 

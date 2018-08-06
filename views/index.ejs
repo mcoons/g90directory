@@ -1,10 +1,16 @@
 <% include ./partials/header %>
-
+<br><br><br>
 <h1>The Class of g90</h1>
-<% student.forEach(student => { %>
+<div class="ui container">
+        <div class="ui four column doubling stackable masonry grid">
+            <% student.forEach(student => { %>
+              <div class="column">
     <div class = 'ui cards'>
         <% include ./partials/student %>
     </div>
+</div>
 <% }) %>
+</div>
+</div>
 
 <% include ./partials/footer %>
