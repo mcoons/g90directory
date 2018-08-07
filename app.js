@@ -58,9 +58,17 @@ app.get("/students/edit/:id", (request, response, next) => {
   queries
     .read("id", request.params.id)
     .then( student => {
-      console.log("HEY: ",student);
-      response.render("postform", { student: student[0] });
+      response.render("edit", { student: student[0] });
     })
+    .catch(next);
+});
+
+app.post("/students/edit/:id", (request, response, next) => {
+  console.log("edit post: ",request.body)
+  queries
+    .update(request.params.id, request.body.student)
+    .then( response.redirect("/students/"+request.params.id)
+    )
     .catch(next);
 });
 
@@ -83,8 +91,6 @@ app.post("/students", (request, response) => {
           response.send("error: ", err);
       });
 });
-
-// app.put();
 
 app.get("/students/delete/:id", (request, response, next) => {
   queries
