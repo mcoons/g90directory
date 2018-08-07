@@ -1,6 +1,7 @@
 body {
     padding: 20px;
     background-color: lightgray;
+    /* background-image: url("/back2.jpg"); */
 }
 
 footer {
@@ -23,7 +24,7 @@ form {
     padding: 5px;
 }
 column {
-    width: 300px;
+    width: 400px;
 }
 
 .mycard{

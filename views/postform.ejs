@@ -4,22 +4,22 @@
 <form class="ui form" action="/students" method="POST">
 
     <label class="input" for="first_name">First Name:</label>
-    <input class="input" type="text" name="student[first_name]" id="first_name" required><br/>
+    <input class="input" type="text" name="student[first_name]" id="first_name" value="<%= student.first_name %>" required><br/>
     
     <label class="input" for="last_name">Last Name:</label>
-    <input class="input" type="text" name="student[last_name]" id="last_name" required>
+    <input class="input" type="text" name="student[last_name]" id="last_name"  value="<%= student.last_name %>" required>
     
     <label class="input" for="photo">Photo URL:</label>
-    <input class="input" type="text" name="student[photo]" id="photo" required>
+    <input class="input" type="text" name="student[photo]" id="photo" value="<%= student.photo %>" required>
     
     <label class="input" for="hometown_lat">Hometown Latitude:</label>
-    <input class="input" type="text" name="student[hometown_lat]" id="hometown_lat" required>
+    <input class="input" type="text" name="student[hometown_lat]" id="hometown_lat" value="<%= student.hometown_lat %>" required>
     
     <label class="input" for="hometown_long">Hometown Longitude:</label>
-    <input class="input" type="text" name="student[hometown_long]" id="hometown_long" required>
+    <input class="input" type="text" name="student[hometown_long]" id="hometown_long" value="<%= student.hometown_long %>" required>
    
     <label class="input" for="prev_occupation">Previous Occupation:</label>
-    <input class="input" type="text" name="student[prev_occupation]" id="prev_occupation" required>
+    <input class="input" type="text" name="student[prev_occupation]" id="prev_occupation" value="<%= student.prev_occupation %>" required>
    
     <input class="input" type="submit">
 </form>

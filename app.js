@@ -43,7 +43,7 @@ app.get("/students/new", (request, response, next) => {
 
 app.get("/students/find", (requests, response, next) => {
   response.render("findform");
-})
+});
 
 app.post("/students/found", (request, response, next) => {
   queries
@@ -52,13 +52,23 @@ app.post("/students/found", (request, response, next) => {
     response.render( "view", {student: student});
   })
   .catch(next);  
-})
+});
+ 
+app.get("/students/edit/:id", (request, response, next) => {
+  queries
+    .read("id", request.params.id)
+    .then( student => {
+      console.log("HEY: ",student);
+      response.render("postform", { student: student[0] });
+    })
+    .catch(next);
+});
 
 app.get("/students/:id", (request, response, next) => {
   queries
     .read("id",request.params.id)
     .then(student => {
-      response.render( "view", {student: student});
+      response.render( "view", { student: student });
     })
     .catch(next);
 });
@@ -76,7 +86,7 @@ app.post("/students", (request, response) => {
 
 // app.put();
 
-app.get("/students/:id/delete", (request, response, next) => {
+app.get("/students/delete/:id", (request, response, next) => {
   queries
     .delete(request.params.id)
     .then( () => { response.redirect("/students");})
@@ -85,7 +95,7 @@ app.get("/students/:id/delete", (request, response, next) => {
 
 app.get("/about", (request, response, next) => {
   response.render("about");
-}) 
+});
 
 
 // API Routes - read only

@@ -2,16 +2,20 @@
 <h1>The Class of </h1>
 <img src="/g90.png" alt="g90 logo" width="250">
 
-<div class="ui container">
-    <div class="ui four column doubling stackable masonry grid">
-    <% student.forEach(student => { %>
-        <div class="column">
-            <div class = 'ui cards'>
-                <% include ./partials/student %>
-            </div>
-        </div>
-    <% }) %>
-    </div>
-</div>
+
+
+<table style="width:100%" class="ui celled table stackable">
+        <tr>
+          <th>Firstname</th>
+          <th>Lastname</th> 
+        </tr>
+        <% student.forEach(student => { %>
+                <tr data-href="/students/<%= student.id %>">
+                    <td><a href="/students/<%= student.id %>"><%= student.first_name  %></a></td>
+                    <td><a href="/students/<%= student.id %>"><%= student.last_name  %></a></td>
+                </tr>
+         <% }) %>
+</table>
+
 
 <% include ./partials/footer %>
