@@ -4,7 +4,8 @@ module.exports = {
 
   list() {
     return database("student")
-      .select();
+      .select()
+      .orderBy("last_name");
   },
 
   create(student) {
@@ -18,8 +19,8 @@ module.exports = {
   read(attribute, value) {
     return database("student")
       .select()
-      .where(attribute, value);
-      // .first();
+      .where(attribute, value)
+      .orderBy("last_name");
   },
 
   update(id, student) {

@@ -1,7 +1,11 @@
 <% include ./partials/header %>
 <!-- <br><br><br> -->
-<h1>Add Student</h1>
-<form class="ui form" action="/students/edit/<%=student.id%>" method="POST">
+
+
+
+
+<h1>Edit Student</h1>
+<form class="ui form editform" action="/students/<%=student.id%>?_method=PUT" method="POST">
 
     <label class="input" for="first_name">First Name:</label>
     <input class="input" type="text" name="student[first_name]" id="first_name" value="<%= student.first_name %>" required><br/>

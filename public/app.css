@@ -16,13 +16,14 @@ footer {
     padding: 10px;
 }
 
-form {
+.findform, .postform, .editform {
     width: 300px;
     border: 1px solid black;
     margin: 10px;
     box-shadow: 5px 5px 5px #888888 !important;
     padding: 5px;
 }
+
 column {
     width: 400px;
 }
@@ -37,6 +38,25 @@ column {
     box-shadow: 5px 5px 5px #888888 !important;
 }
 
+table {
+    width: 300px !important;
+}
+
+aside {
+    margin-left: 20px;
+    box-shadow: 5px 5px 5px #888888 !important;
+    padding: 10px;
+    background-color: white;
+}
+
+.flexcontainer{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flexitem{
+
+}
 /* .header img {
     width: 50px;
 } */

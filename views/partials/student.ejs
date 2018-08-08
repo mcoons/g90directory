@@ -1,19 +1,23 @@
+
 <div class='ui card mycard content'>
     <img class='ui fluid image' src="<%= student.photo %>" alt="Favorite Animal Picture">
     <h3><%= student.first_name %> <%= student.last_name %></h3>
-    <p><b>Previous Occupation:</b> <%= student.prev_occupation %></p>
-    <p><b>Hometown Location:</b> <%= student.hometown_lat %> - <%= student.hometown_long %></p>
-    <!-- <a href="/students/<%=student.id%>/edit">Edit This Student</a> -->
+    <p><b>Previous Occupation:</b><br> <%= student.prev_occupation %></p>
+    <p><b>Hometown Location:</b><br> <%= student.hometown_lat %> - <%= student.hometown_long %></p>
    
     <iframe
     width="200"
     height="200"
     frameborder="0" style="border:0"
-    src="https://www.google.com/maps/embed/v1/view?key=AIzaSyCHy2l3K0UCngroR59ogIe6dYUgcpo_uuc&center=<%= student.hometown_lat %>,<%= student.hometown_long %>&zoom=10&maptype=satellite"
-    >
+    src="https://www.google.com/maps/embed/v1/view?key=AIzaSyCHy2l3K0UCngroR59ogIe6dYUgcpo_uuc&center=<%= student.hometown_lat %>,<%= student.hometown_long %>&zoom=10&maptype=satellite">
     </iframe>
 
-    <!-- <a href="/students/<%= student.id %>">View Student </a> -->
-    <a href="/students/edit/<%= student.id %>">Edit Student </a>
-    <a href="/students/delete/<%= student.id %>">Delete Student </a>
+    <!-- <button href="/edit/<%= student.id %>">Edit Student </button> -->
+    <form class="ui form" action="/edit/<%= student.id %>?_method=GET" method="POST">
+        <input class="input" type="submit" value="Edit">
+    </form>    
+    
+    <form class="ui form" action="/students/<%=student.id%>?_method=DELETE" method="POST">
+        <input class="input" type="submit" value="Delete">
+    </form>
 </div>

@@ -5,16 +5,16 @@
 
 
 <table style="width:100%" class="ui celled table stackable">
-        <tr>
-          <th>Firstname</th>
-          <th>Lastname</th> 
+    <tr>
+        <th>Lastname</th> 
+        <th>Firstname</th>
+    </tr>
+    <% student.forEach(student => { %>
+        <tr data-href="/students/<%= student.id %>">
+            <td><a href="/students/<%= student.id %>"><%= student.last_name  %></a></td>
+            <td><a href="/students/<%= student.id %>"><%= student.first_name  %></a></td>
         </tr>
-        <% student.forEach(student => { %>
-                <tr data-href="/students/<%= student.id %>">
-                    <td><a href="/students/<%= student.id %>"><%= student.first_name  %></a></td>
-                    <td><a href="/students/<%= student.id %>"><%= student.last_name  %></a></td>
-                </tr>
-         <% }) %>
+        <% }) %>
 </table>
 
 
