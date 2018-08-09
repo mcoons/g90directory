@@ -14,10 +14,10 @@
 
     <!-- <button href="/edit/<%= student.id %>">Edit Student </button> -->
     <form class="ui form" action="/edit/<%= student.id %>?_method=GET" method="POST">
-        <input class="input" type="submit" value="Edit">
+        <input class="input" type="submit" value="Edit" width="100>
     </form>    
     
     <form class="ui form" action="/students/<%=student.id%>?_method=DELETE" method="POST">
-        <input class="input" type="submit" value="Delete">
+        <input class="input" type="submit" value="Delete" width="100">
     </form>
 </div>
