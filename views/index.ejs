@@ -3,8 +3,42 @@
 <img src="/g90.png" alt="g90 logo" width="250">
 
 
+<div class="ui container">
+    <div class="ui four column doubling stackable masonry grid">
+    <% if (student.length>0) { student.forEach(student => { %>
+        <div class="column">
+                <a href="/students/<%= student.id %>"> 
+            <div class = 'ui cards mycard'>
+               <h3><%= student.first_name %> <%= student.last_name %></h3>
+            </div>
+        </a>
+        </div>
+    <% })}  %>
 
-<table style="width:100%" class="ui celled table stackable">
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <% student.forEach(student => { %>
+
+    <div class='ui card mycard content'>
+        <h3><%= student.first_name %> <%= student.last_name %></h3>
+    </div>
+<% }) %> -->
+
+<!-- <table style="width:100%" class="ui celled table stackable">
     <tr>
         <th>Lastname</th> 
         <th>Firstname</th>
@@ -15,7 +49,7 @@
             <td><a href="/students/<%= student.id %>"><%= student.first_name  %></a></td>
         </tr>
         <% }) %>
-</table>
+</table> -->
 
 
 <% include ./partials/footer %>

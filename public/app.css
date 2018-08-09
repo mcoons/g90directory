@@ -31,15 +31,13 @@ column {
 .mycard{
     padding: 10px !important;
     box-shadow: 5px 5px 5px #888888 !important;
+    background-color: #EA943E;
+    margin: 3px !important;
 }
 
 .mycard img{
     padding: 10px !important;
     box-shadow: 5px 5px 5px #888888 !important;
-}
-
-table {
-    width: 300px !important;
 }
 
 aside {
