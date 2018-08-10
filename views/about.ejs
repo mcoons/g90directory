@@ -1,12 +1,16 @@
 
 <% include ./partials/header %>
-
+<br><br>
 <h1>About this app</h1>
-<div class = "flexcontainer">
-    <div class = 'ui cards aboutcard flexitem'>
-        <% include ./partials/student %>
-    </div>
-    <aside class="flexitem">
+<div class = "flex-container">
+
+
+
+    <!-- <div class = 'aboutcard'> -->
+        <!-- <% include ./partials/student %> -->
+    <!-- </div> -->
+    
+    <aside class="flex-item">
         <p>This is a full stack app written in express, ejx and knex on a PostgreSQL database.</p>
         <p>Knex migrations and seeds are used to prepare the database.</p>
         <p>It is published at https://g90-directory.herokuapp.com/  .</p>
@@ -15,9 +19,17 @@
         <p>/api/id/:id - Query by ID.</p>
         <p>/api/lname/:lname - Query by last name</p>
         <p>/api/fname/:fname - Query by first name</p>
+        <p>/api/reset - Reset API data</p>
         <br><br>
-        <a href="/reset">Reset Data</a>
+        <a href="/api/reset">Reset Data</a>
     </aside>
+
+    <% include ./partials/student %>
+
 </div>
 <br><br>
 <% include ./partials/footer %>
+
+
+<!-- <div class="panel panel-default mycard flex-item">
+    <div class='panel-body'> -->

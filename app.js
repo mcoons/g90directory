@@ -18,7 +18,7 @@ app.get("/", (request, response) => {
   response.redirect("/students");
 });
 
-app.get("/reset", (request, response) => {
+app.get("/api/reset", (request, response) => {
     database.seed.run()
     .then(() => {response.redirect("/students");});
 });

@@ -1,7 +1,8 @@
+
 <% include ./partials/header %>
-<!-- <br><br><br> -->
+<br><br>
 <h1>Add Student</h1>
-<form class="ui form postform" action="/students" method="POST">
+<form class="postform" action="/students" method="POST">
 
     <label class="input" for="first_name">First Name:</label>
     <input class="input" type="text" name="student[first_name]" id="first_name" required><br/>
@@ -20,7 +21,7 @@
    
     <label class="input" for="prev_occupation">Previous Occupation:</label>
     <input class="input" type="text" name="student[prev_occupation]" id="prev_occupation" required>
-   
+    <br><br>
     <input class="input" type="submit">
 </form>
 

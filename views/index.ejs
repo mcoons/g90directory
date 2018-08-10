@@ -1,17 +1,21 @@
+
 <% include ./partials/header %>
+<br><br>
 <h1>The Class of </h1>
 <img src="/g90.png" alt="g90 logo" width="250">
 
+<div class="">
+    <div class="flex-container">
 
-<div class="ui container">
-    <div class="ui four column doubling stackable masonry grid">
     <% if (student.length>0) { student.forEach(student => { %>
-        <div class="column">
+        <div class="flex-item index-item">
+
             <a href="/students/<%= student.id %>"> 
-                <div class = 'ui cards mycard'>
-                <h3><%= student.first_name %> <%= student.last_name %></h3>
+                <div class = ''>
+                        <h3><%= student.first_name %> <%= student.last_name %></h3>
                 </div>
             </a>
+
         </div>
     <% })}  %>
 

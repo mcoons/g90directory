@@ -1,20 +1,15 @@
+
 <% include ./partials/header %>
-
-<br><br><br>
-
-<div class="ui container">
-    <div class="ui four column doubling stackable masonry grid">
+<br><br>
+<div class="flex-container">
     <% if (student.length>0) { student.forEach(student => { %>
-        <div class="column">
-            <div class = 'ui cards'>
+
                 <% include ./partials/student %>
-            </div>
-        </div>
+
     <% })} else { %>
         <br><br><br>
         <p>We're sorry, there is no matching data.</p>
     <%  } %>
-    </div>
 </div>
 
 <% include ./partials/footer %>
