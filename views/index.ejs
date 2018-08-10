@@ -12,10 +12,12 @@
 
     <% if (student.length>0) { student.forEach(student => { %>
         <div class="flex-item index-item">
-
             <a href="/students/<%= student.id %>"> 
+
                 <div class = ''>
-                        <h3><%= student.first_name %> <%= student.last_name %></h3>
+                        <img class='img-responsive image' src="/<%= student.image %>" alt="Picture" width="35" style="float: left;">
+
+                        <h3 style="display:inline; padding:5px;"><%= student.first_name %> <%= student.last_name %></h3>
                 </div>
             </a>
 
