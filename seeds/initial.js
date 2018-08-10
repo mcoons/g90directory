@@ -314,20 +314,34 @@ exports.seed = function(knex, Promise) {
                   prev_occupation: "Manager of Strange People"
               },
               {
-                  first_name: "Ryan",
-                  last_name: "McCrory",
-                  image: "Ryan_McCrory.jpeg",
-                  phone: "303-709-9989",
-                  email: "ryanmccrory83@gmail.com",
-                  linked_in: "https://www.linkedin.com/in/ryan-mccrory83/",
-                  facebook: "https://github.com/ryanmccrory83",
-                  photo:
-                      "http://cdn.smosh.com/wp-content/uploads/bloguploads/cwolf-1.jpg",
-                  hometown_lat: "39.739236",
-                  hometown_long: "-104.990251",
-                  prev_occupation: "US Army"
-              },
-              {
+                first_name: "Ryan",
+                last_name: "McCrory",
+                image: "Ryan_McCrory.jpeg",
+                phone: "303-709-9989",
+                email: "ryanmccrory83@gmail.com",
+                linked_in: "https://www.linkedin.com/in/ryan-mccrory83/",
+                facebook: "https://github.com/ryanmccrory83",
+                photo:
+                    "http://cdn.smosh.com/wp-content/uploads/bloguploads/cwolf-1.jpg",
+                hometown_lat: "39.739236",
+                hometown_long: "-104.990251",
+                prev_occupation: "US Army"
+            },
+            {
+                first_name: "Robert ",
+                last_name: "Connell",
+                image: "Robert_Connell.jpeg",
+                phone: "305-333-6142",
+                email: "robertjconnell213@gmail.com",
+                linked_in: "https://www.linkedin.com/in/robertjconnell/",
+                facebook: "https://github.com/robertconnell",
+                photo:
+                    "",
+                hometown_lat: "39.739236",
+                hometown_long: "-104.990251",
+                prev_occupation: ""
+            },
+          {
                   first_name: "Matthew",
                   last_name: "Huston",
                   image: "Matthew_Huston.jpeg",
