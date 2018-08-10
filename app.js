@@ -31,6 +31,14 @@ app.get("/about", (request, response, next) => {
     .catch(next);
 });
 
+
+app.get("/all", (request, response, next) => {
+  queries
+    .list()
+    .then(student => { response.render( "view", {student: student}); })
+    .catch(next);
+});
+
 app.get("/new", (request, response, next) => {
   response.render("postform");
 });

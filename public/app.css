@@ -66,3 +66,7 @@ aside {
     margin-top: 5px;
     display: inline;
 }
+
+.image {
+    border-radius: 100%;
+}

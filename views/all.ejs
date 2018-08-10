@@ -1,0 +1,23 @@
+
+<% include ./partials/header %>
+<br><br>
+<h1>The Class of </h1>
+
+<a href="/all">
+    <img src="/g90.png" alt="g90 logo" width="250">
+</a>
+
+<div class="">
+    <div class="flex-container">
+
+        <% if (student.length>0) { student.forEach(student => { %>
+
+            <% include ./partials/student %>
+
+        <% })} else { %>
+
+    </div>
+</div>
+
+
+<% include ./partials/footer %>

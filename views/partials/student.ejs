@@ -1,13 +1,23 @@
 <br><br><br>
 <div class="panel panel-default mycard flex-item">
     <div class='panel-body'>
+        
+        <img class='img-responsive image' src="/<%= student.image %>" alt="Picture" width="280">
+
         <h3><%= student.first_name %> <%= student.last_name %></h3>
+        <p><b>Email:</b><br> <%= student.email %> </p>
+        <p><b>Phone:</b><br><%= student.phone %>  </p>
+        <p><b>LinkedIn:</b><br><a href="<%= student.linked_in %>"><%= student.linked_in %></a>  </p>
+        <p><b>GitHub:</b><br> <a href="<%= student.facebook %> "><%= student.facebook %></a>  </p>
+<br>
+
+
         <p><b>Previous Occupation:</b><br> <%= student.prev_occupation %></p>
         <p><b>Hometown Location:</b><br> <%= student.hometown_lat %> - <%= student.hometown_long %></p>
         
         <iframe
-        width="200"
-        height="200"
+        width="250"
+        height="250"
         frameborder="0" style="border:0"
         src="https://www.google.com/maps/embed/v1/view?key=AIzaSyCHy2l3K0UCngroR59ogIe6dYUgcpo_uuc&center=<%= student.hometown_lat %>,<%= student.hometown_long %>&zoom=10&maptype=satellite">
     </iframe>
@@ -19,7 +29,7 @@
     <form class="" action="/students/<%=student.id%>?_method=DELETE" method="POST">
         <input class="input" type="submit" value="Delete" width="100">
     </form>
-    <h3>Spirit Animal</h3>
-    <img class='img-responsive' src="<%= student.photo %>" alt="Favorite Animal Picture">
+    <!-- <h3>Spirit Animal</h3> -->
+    <!-- <img class='img-responsive' src="<%= student.photo %>" alt="Favorite Animal Picture"> -->
     </div>
 </div>
