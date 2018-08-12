@@ -14,6 +14,11 @@ app.use(express.static('public'));
 app.use(methodOverride("_method"));
 app.set("view engine", "ejs");
 
+
+//////     RENDERED ROUTES     //////
+
+
+
 app.get("/", (request, response) => {
   response.redirect("/students");
 });
@@ -27,7 +32,7 @@ app.get("/api/reset", (request, response) => {
 app.get("/about", (request, response, next) => {
   queries
     .read("id","19")
-    .then(student => { response.render( "about", { student: student[0] }); })
+    .then(student => { response.render( "about", { student: student[0], url: "about" }); })
     .catch(next);
 });
 
@@ -35,29 +40,30 @@ app.get("/about", (request, response, next) => {
 app.get("/all", (request, response, next) => {
   queries
     .list()
-    .then(student => { response.render( "view", {student: student}); })
+    .then(student => { response.render( "view", {student: student, url: "all"}); })
     .catch(next);
 });
 
 app.get("/new", (request, response, next) => {
-  response.render("postform");
+  response.render("postform",{ url: "new"});
 });
 
 app.get("/find", (requests, response, next) => {
-  response.render("findform");
+  app.set("url","find")
+  response.render("findform", { url: "find"});
 });
 
 app.post("/find", (request, response, next) => {
   queries
     .read(request.body.radio_find,request.body.findValue)
-    .then(student => { response.render( "view", {student: student}); })
+    .then(student => { response.render( "view", {student: student, url: 'view'}); })
     .catch(next);  
 });
 
 app.get("/edit/:id", (request, response, next) => {
   queries
     .read("id", request.params.id)
-    .then(student => { response.render("edit", { student: student[0] }); })
+    .then(student => { response.render("edit", { student: student[0], url:"edit" }); })
     .catch(next);
 });
 
@@ -68,7 +74,7 @@ app.get("/edit/:id", (request, response, next) => {
 app.get("/students", (request, response, next) => {
   queries
     .list()
-    .then(student => { response.render("index", { student: student }); })
+    .then(students => { response.render("index", { student: students, url: "students" }); })
     .catch(next);
 });
 
@@ -82,7 +88,7 @@ app.post("/students", (request, response) => {
 app.get("/students/:id", (request, response, next) => {
   queries
     .read("id",request.params.id)
-    .then(student => { response.render( "view", { student: student }); })
+    .then(student => { response.render( "view", { student: student, url:"view" }); })
     .catch(next);
 });
 
@@ -139,3 +145,5 @@ app.get("/api/fname/:fname", (request, response, next) => {
 
 
 app.listen(port, () => console.log(`Server is now listening on port ${port}`));
+
+module.exports = {app};

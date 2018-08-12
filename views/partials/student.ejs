@@ -1,9 +1,8 @@
 <br><br><br>
+<% let shortLinkedIn = student.linked_in.replace("https://www.linkedin.com/in/","").replace("/","") %>
+<% let shortGit = student.facebook.replace("https://github.com/","").replace("/","") %>
 
-<!-- <% function toggleHidden(event){console.log("parent: ", this.parent());} %> -->
-  
-
-<div class="panel panel-default mycard flex-item">
+<div class="panel panel-default mycard flex-item .col-12 .col-sm-12 .col-md-4 .col-lg-3">
     <div class='panel-body'>
         
         <img class='img-responsive image' src="/<%= student.image %>" alt="Picture" width="280">
@@ -11,21 +10,10 @@
         <h3><%= student.first_name %> <%= student.last_name %></h3>
         <p><b>Email:</b><br> <%= student.email %> </p>
         <p><b>Phone:</b><br><%= student.phone %>  </p>
-        <p><b>LinkedIn:</b><br><a href="<%= student.linked_in %>" ><%= student.linked_in %></a>  </p>
-        <p><b>GitHub:</b><br> <a href="<%= student.facebook %>"> <%= student.facebook %></a>  </p>
+        <p><b>LinkedIn:</b><br><a href="<%= student.linked_in %>" ><%= shortLinkedIn %></a>  </p>
+        <p><b>GitHub:</b><br> <a href="<%= student.facebook %>"> <%= shortGit %></a>  </p>
         <br>
-        
-        <!-- <button onclick="toggleHidden">Show More</button> -->
-
         <p><b>Previous Occupation:</b><br> <%= student.prev_occupation %></p>
-        <p><b>Hometown Location:</b><br> <%= student.hometown_lat %> - <%= student.hometown_long %></p>
-        
-        <iframe
-            width="250"
-            height="250"
-            frameborder="0" style="border:0"
-            src="https://www.google.com/maps/embed/v1/view?key=AIzaSyCHy2l3K0UCngroR59ogIe6dYUgcpo_uuc&center=<%= student.hometown_lat %>,<%= student.hometown_long %>&zoom=10&maptype=satellite">
-        </iframe>
         
         <form class="" action="/edit/<%= student.id %>?_method=GET" method="POST">
             <input class="input buttonshadow" type="submit" value="Edit" width="100">
@@ -34,7 +22,5 @@
         <form class="" action="/students/<%=student.id%>?_method=DELETE" method="POST">
             <input class="input buttonshadow" type="submit" value="Delete" width="100">
         </form>
-    <!-- <h3>Spirit Animal</h3> -->
-    <!-- <img class='img-responsive' src="<%= student.photo %>" alt="Favorite Animal Picture"> -->
     </div>
 </div>

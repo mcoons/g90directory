@@ -31,10 +31,10 @@
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="/">Home</a></li>
-                    <li><a href="/new">Add Student</a></li>
-                    <li><a href="/find">Find Student</a></li>
-                    <li><a href="/about">About</a></li>
+                    <li <% if (url && url === "students") { %>class="active"<% } %> ><a href="/">Home</a></li>
+                    <li <% if (url && url === "new")     { %>class="active"<% } %> ><a href="/new">Add Student</a></li>
+                    <li <% if (url && url === "find")    { %>class="active"<% } %> ><a href="/find">Find Student</a></li>
+                    <li <% if (url && url === "about")   { %>class="active"<% } %> ><a href="/about">About</a></li>
                 </ul>
                 </div>
             </div>
