@@ -9,7 +9,8 @@
         <div class = "studentinfo">
             <h3><%= student.first_name %> <%= student.last_name %></h3>
             <p><b>Email:</b><br> <%= student.email %> </p>
-            <p><b>Phone:</b><br><%= student.phone %>  </p>
+            <!-- <p><b>Phone:</b><br><%= student.phone %>  </p> -->
+            <p><b>Phone:</b><br><a href="tel:<%= student.phone %>"><%= student.phone %></a> </p>
             <p><b>LinkedIn:</b><br><a href="<%= student.linked_in %>" ><%= shortLinkedIn %></a>  </p>
             <p><b>GitHub:</b><br> <a href="<%= student.facebook %>"> <%= shortGit %></a>  </p>
             <br>
