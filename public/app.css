@@ -11,6 +11,16 @@ footer {
     margin-top: 20px;
 }
 
+h1 {
+    text-shadow: 1px 2px 2px #888888;
+}
+
+.studentinfo{
+    border: rgb(121, 121, 121) solid 1px;
+    box-shadow: 5px 5px 5px #888888 !important;
+    margin-top: 10px;
+    padding: 5px;
+}
 
 .findform, .postform, .editform {
     width: 300px;
@@ -20,14 +30,9 @@ footer {
     padding: 5px;
 }
 
-/* column {
-    width: 400px;
-} */
-
 .mycard{
     padding: 10px !important;
     box-shadow: 5px 5px 5px #888888 !important;
-    /* background-color: #EA943E; */
     margin: 10px !important;
     width: 300px;
 }
@@ -39,7 +44,6 @@ footer {
 }
 
 aside {
-    /* margin-left: 20px; */
     box-shadow: 5px 5px 5px #888888 !important;
     padding: 10px;
     background-color: white;
@@ -54,7 +58,7 @@ aside {
     padding: 10px !important;
     box-shadow: 5px 5px 5px #888888 !important;
     margin: 10px !important;
-    flex-basis: 300px;
+    width: 300px;
 }
 
 .index-item{

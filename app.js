@@ -2,7 +2,7 @@ const express = require("express");
 // const cors = require("cors");
 const queries = require("./queries");
 const methodOverride = require("method-override");
-const localport = 3001;
+const localport = 3005;
 const port = process.env.PORT || localport;
 const database = require("./database-connection");
 
@@ -18,10 +18,10 @@ app.set("view engine", "ejs");
 //////     RENDERED ROUTES     //////
 
 
-
 app.get("/", (request, response) => {
   response.redirect("/students");
 });
+
 
 app.get("/api/reset", (request, response) => {
     database.seed.run()

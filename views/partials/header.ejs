@@ -1,23 +1,19 @@
 <!DOCTYPE html>
 <html>
-
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>G90</title>
-        <!-- <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.4/semantic.min.css"> -->
  
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
-
-
-        
         <link rel="stylesheet" type="text/css" href="/app.css">
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     </head>
 
-    <body>
-
-        
+    <body>    
         <!-- Start NAV bar -->
         <nav class="navbar navbar-inverse navbar-fixed-top">
             <div class="container-fluid">
@@ -31,7 +27,7 @@
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
-                    <li <% if (url && url === "students") { %>class="active"<% } %> ><a href="/">Home</a></li>
+                    <li <% if (url && url === "students"){ %>class="active"<% } %> ><a href="/">Home</a></li>
                     <li <% if (url && url === "new")     { %>class="active"<% } %> ><a href="/new">Add Student</a></li>
                     <li <% if (url && url === "find")    { %>class="active"<% } %> ><a href="/find">Find Student</a></li>
                     <li <% if (url && url === "about")   { %>class="active"<% } %> ><a href="/about">About</a></li>
