@@ -1,4 +1,4 @@
-#G90 Directory
+# G90 Directory
 
 The g90 Directory is a student directory of my cohort.
 
