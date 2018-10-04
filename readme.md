@@ -20,3 +20,14 @@ The server also has an API with the following points.
 * /api/fname/:fname - Query by first name
 
 * /api/reset - Reset API data
+
+
+## Deployed Link
+
+https://g90.herokuapp.com/students
+
+## Instructions
+
+  - Clone the repo
+  - Run $npm install to install dependencies
+  - Run $npm start
