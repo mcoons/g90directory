@@ -2,6 +2,8 @@
 
 The g90 Directory is a student directory of my cohort.
 
+![g90 Dir](/g90dir.png)
+
 
 This is a full stack app written in express, ejs and knex on a PostgreSQL database.
 
